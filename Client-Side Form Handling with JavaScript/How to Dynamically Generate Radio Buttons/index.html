@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="languages"></div>
+
+    <script>
+      const languageOptions = ["Python", "Javascript", "C++", "Java"];
+
+      // Generate the radio buttons
+      const languages = document.querySelector("#languages");
+      languages.innerHTML = languageOptions
+        .map(
+          (language) => `
+          <div>
+              <input type="radio" name="language" value="${language}" id="${language}">
+              <label for="${language}">${language}</label>
+          </div>`
+        )
+        .join(" ");
+    </script>
+  </body>
+</html>

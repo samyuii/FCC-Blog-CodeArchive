@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="languages"></div>
+    <!-- To fetch our selected language output: -->
+    <div id="languageOutput"></div>
+
+    <script>
+      const languageOptions = ["Python", "Javascript", "C++", "Java"];
+
+      // Generate the radio buttons
+      const languages = document.querySelector("#languages");
+      languages.innerHTML = languageOptions
+        .map(
+          (language) => `
+          <div>
+              <input type="radio" name="language" value="${language}" id="${language}">
+              <label for="${language}">${language}</label>
+          </div>`
+        )
+        .join(" ");
+
+      // Attaching Change Event Listeners
+      const radioButtons = document.querySelectorAll('input[name="language"]');
+      for (const radioButton of radioButtons) {
+        radioButton.addEventListener("change", showSelectedlanguage);
+      }
+
+      // Handling the Change Event
+      function showSelectedlanguage() {
+        if (this.checked) {
+          document.querySelector(
+            "#languageOutput"
+          ).innerText = `You selected ${this.value}`;
+        }
+      }
+    </script>
+  </body>
+</html>
