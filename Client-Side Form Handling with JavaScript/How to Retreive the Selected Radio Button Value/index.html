@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form id="languageForm">
+      <p>Select your favorite programming language:</p>
+      <div>
+        <input type="radio" name="language" value="JavaScript" id="js" />
+        <label for="js">JavaScript</label>
+      </div>
+      <div>
+        <input type="radio" name="language" value="Python" id="python" />
+        <label for="python">Python</label>
+      </div>
+      <div>
+        <input type="radio" name="language" value="Java" id="java" />
+        <label for="java">Java</label>
+      </div>
+      <!-- More language options can be added here -->
+    </form>
+
+    <button id="btn">Show Selected Language</button>
+    <p id="output"></p>
+
+    <script>
+      const btn = document.querySelector("#btn");
+      const radioButtons = document.querySelectorAll('input[name="language"]');
+      const output = document.getElementById("output");
+
+      btn.addEventListener("click", () => {
+        let selectedLanguage;
+        for (const radioButton of radioButtons) {
+          if (radioButton.checked) {
+            selectedLanguage = radioButton.value;
+            break;
+          }
+        }
+        // Displaying the output:
+        output.innerText = selectedLanguage
+          ? `You selected ${selectedLanguage}`
+          : `You haven't selected any language`;
+      });
+    </script>
+  </body>
+</html>
