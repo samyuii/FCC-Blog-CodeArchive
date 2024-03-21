@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="cities">
+      <option value="JAI">Jaipur</option>
+      <option value="DEL">New Delhi</option>
+      <option value="UDR">Udaipur</option>
+      <option value="MUM">Mumbai</option>
+    </select>
+    <script>
+      const selectElement = document.getElementById("cities");
+      const secondOptionText = selectElement.options[1].text; // Accessing text of the second option
+      const secondOptionValue = selectElement.options[1].value; // Accessing value of the second option
+      console.log(secondOptionText, secondOptionValue);
+    </script>
+  </body>
+</html>
