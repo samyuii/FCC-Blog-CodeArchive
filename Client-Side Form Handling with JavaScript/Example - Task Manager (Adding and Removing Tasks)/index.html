@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #container {
+      max-width: 540px;
+      margin: 50px auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <form>
+        <label for="task">Task:</label>
+        <input
+          type="text"
+          id="task"
+          placeholder="Enter a task"
+          autocomplete="off"
+        />
+
+        <button id="btnAdd">Add Task</button>
+
+        <label for="taskList">Task List:</label>
+        <select id="taskList" name="taskList" multiple></select>
+
+        <button id="btnRemove">Remove Selected Tasks</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

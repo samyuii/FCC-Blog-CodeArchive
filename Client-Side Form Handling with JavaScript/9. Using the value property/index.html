@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="cities">
+      <option value="">Jaipur</option>
+      <option value="DEL">New Delhi</option>
+      <option value="UDR">Udaipur</option>
+      <option>Mumbai</option>
+    </select>
+    <button id="btn">Click me</button>
+    <script>
+      const btn = document.querySelector("#btn");
+      const selectElement = document.querySelector("#cities");
+
+      btn.onclick = (event) => {
+        event.preventDefault();
+        alert(selectElement.value);
+      };
+    </script>
+  </body>
+</html>

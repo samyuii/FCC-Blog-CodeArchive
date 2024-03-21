@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="cities" multiple>
+      <option value="JAI">Jaipur</option>
+      <option value="DEL">New Delhi</option>
+      <option value="UDR">Udaipur</option>
+      <option value="MUM">Mumbai</option>
+    </select>
+  </body>
+  <script>
+    const selectElement = document.getElementById("cities");
+    console.log(selectElement.selectedIndex); // Returns the index of the selected option
+    console.log(selectElement.value); // Returns the value of the selected option
+    console.log(selectElement.multiple); // Returns true if multiple selections are allowed
+  </script>
+  <script></script>
+</html>

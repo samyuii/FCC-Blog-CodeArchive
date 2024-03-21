@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="userInput">Enter Your Name:</label>
+    <input type="text" id="userInput" placeholder="Your name" />
+    <p>Your name is: <span id="displayName"></span></p>
+
+    <script>
+      const userInput = document.getElementById("userInput");
+      const Name = document.getElementById("displayName");
+
+      userInput.addEventListener("change", function () {
+        Name.textContent = userInput.value || "Guest!";
+      });
+    </script>
+  </body>
+</html>

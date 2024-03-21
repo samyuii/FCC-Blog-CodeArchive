@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const languageOptions = ["Python", "Javascript", "C++", "Java"];
+
+      // Generate the checkboxes
+      const html = languageOptions
+        .map(
+          (language) => `<label for="language-${language}">
+                  <input type="checkbox" name="language" id="language-${language}" value="${language}"> ${language}
+              </label>`
+        )
+        .join(" ");
+      document.querySelector("#languages").innerHTML = html;
+    </script>
+  </body>
+</html>
